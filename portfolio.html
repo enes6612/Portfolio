@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="desktop-nav">
+    <div class="logo">Enes Tanriverdi</div>
+    <ul class="nav-links">
+        <li class="nav-ul-li"><a href="#overmij">Over mij</a></li>
+        <li class="nav-ul-li"><a href="#logboek">Logboek</a></li>
+        <li class="nav-ul-li"><a href="#ontwikkeling">Ontwikkeling</a></li>
+        <li class="nav-ul-li"><a href="#opdrachten">Opdrachten</a></li>
+        <li class="nav-ul-li"><a href="#reflectie">Reflectie</a></li>
+    </ul>
+</div>
+<div class="mobile-nav" id="mobile-nav">
+    <div class="logo">Enes Tanriverdi</div>
+    <div class="mobile-nav-menu">
+        <div class="mobile-nav-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links-mobile">
+            <p onclick="toggleMenu()"><a href="#overmij">Over mij</a></p>
+            <p onclick="toggleMenu()"><a href="#logboek">Logboek</a></p>
+            <p onclick="toggleMenu()"><a href="#ontwikkeling">Ontwikkeling</a></p>
+            <p onclick="toggleMenu()"><a href="#opdrachten">Opdrachten</a></p>
+            <p onclick="toggleMenu()"><a href="#reflectie">Reflectie</a></p>
+        </div>
+    </div>
+</div>
+<section class="profile" id="profile">
+    <div class="section-img-container">
+        <img src="assets/Foto.png" alt="Foto van mezelf"/>
+    </div>
+    <div class="section-text-container">
+        <h1 class="section-header">Enes Tanriverdi</h1>
+        <p class="section-text-p">Programmeur</p>
+        <div class="section-buttons">
+            <button onclick="window.open('cvproject.html')">CV</button>
+        </div>
+        <div id="socials-container">
+            <a href="https://www.linkedin.com/in/enes-tanriverdi/" target="_blank">
+                <img src="assets/linkedin.png" alt="My Linkedin profile" class="icon"/></a>
+            <a href="https://github.com/enes6612" target="_blank">
+                <img src="assets/github.png" alt="Mijn github pagina" class="icon"/></a>
+        </div>
+    </div>
+</section>
+<div id="overmij" class="section">
+    <h2>Over mij</h2>
+    <div class="overmij-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquam at autem commodi ducimus eaque exercitationem expedita iste, odio?
+    </div>
+</div>
+<script src="JS/portfolio.js"></script>
+</body>
+</html>

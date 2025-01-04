@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f0f2f5;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    display: inline-block;
+    padding: 2px;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 40px;
+}
+header{
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    transform: skewY(-2deg);
+    position: relative;
+    width: 100%;
+    cursor: default;
+}
+header > div{
+    transform: skewY(2deg);
+}
+.cv-photo-container{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 32px auto;
+    position: relative;
+    z-index: 1;
+}
+.cv-photo-container a{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+}
+.cv-photo{
+    border-radius: 50%;
+    width: 150px;
+    border: 4px solid white;
+    transition: all 0.3s ease;
+}
+.cv-photo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cv-photo:active{
+    transform: scale(1.05);
+    box-shadow: none;
+    border: 8px solid #3498db;
+}
+#name{
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 16px;
+    animation: slideIN 1s ease-out;
+}
+.subtitle{
+    font-size: 24px;
+    opacity: 0.9;
+}
+.scroll-indicator {
+    margin-top: 25px;
+    padding: 10px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+.scroll-indicator p {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.profile, .over-mij, .Werkervaring, .vaardigheden, .talenkennis, .opleiding{
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.profile:hover{
+    transform: translateY(-5px);
+}
+.profile h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.profile-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    width: 100%;
+    cursor: default;
+}
+.profile-info-item{
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+    transition: all 0.3s ease;
+    flex: 1 1 200px;
+}
+.profile-info-item:hover{
+    background: #e1f0fa;
+    transform: translateX(5px);
+}
+.profile-info-item-name{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+.profile-info-item-value{
+    color: #2c3e50;
+    font-weight: 500;
+}
+.over-mij{
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.over-mij:hover{
+    transform: translateY(-5px);
+}
+.over-mij h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.over-mij p{
+    cursor: default;
+}
+.Werkervaring{
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.Werkervaring:hover{
+    transform: translateY(-5px);
+}
+.Werkervaring h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.werkervaring-list{
+    list-style: none;
+    width: 100%;
+    cursor: default;
+}
+.werkervaring-item{
+    background: white;
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.werkervaring-item:hover{
+    transform: translateX(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.werkervaring-functie{
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.werkervaring-bedrijf{
+    color: #3498db;
+    font-weight: 500;
+}
+.werkervaring-periode{
+    color: #666;
+    font-style: italic;
+    margin: 8px 0;
+}
+.werkervaring-beschrijving{
+    margin-top: 8px;
+    line-height: 1.6;
+    width: 100%;
+}
+.vaardigheden{
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.vaardigheden:hover{
+    transform: translateY(-5px);
+}
+.vaardigheden h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+    cursor: default;
+}
+.skill-item{
+    background: #e1f0fa;
+    color: #3498db;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.skill-item:hover{
+    transform: scale(1.05);
+    background: #3498db;
+    color: white;
+}
+.talenkennis{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+.talenkennis:hover{
+    transform: translateY(-5px);
+}
+.talenkennis h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.talen{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+.talen-item{
+    background: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 2px solid #e1f0fa;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+.talen-item:hover{
+    transform: translateY(-3px);
+    border-color: #3498db;
+}
+.talen-name{
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+.talen-level{
+    color: #3498db;
+    font-size: 14px;
+}
+@keyframes slideIN {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.opleiding{
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.opleiding:hover{
+    transform: translateY(-5px);
+}
+.opleiding h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
+.opleiding table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    cursor: default;
+}
+.opleiding table th{
+    background: #2c3e50;
+    color: white;
+    padding: 16px;
+    text-align: left;
+}
+table tr:nth-child(even){
+    background: #e9ecef;
+}
+table tr:nth-child(odd){
+    background: #f8f9fa;
+}
+.opleiding table td{
+    padding: 16px;
+    border-bottom: 1px solid #dee2e6;
+}
+.opleiding-cards{
+    display: none;
+    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.opleiding-cards:hover{
+    transform: translateY(-5px);
+}
+.opleiding-cards h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+    vertical-align: top;
+}
+.opleiding-card{
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+.opleiding-card:hover{
+    transform: translateY(-5px);
+    background: #e1f0fa;
+}
+.opleiding-card-label{
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.opleiding-card-content{
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+.opleiding-card-content:last-child{
+    margin-bottom: 0;
+}
+footer{
+    background: #2c3e50;
+    color: white;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: default;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+footer ul li{
+    padding: 3px;
+}
+footer p{
+    padding: 16px;
+}
+footer button a{
+    text-decoration: none;
+    color: buttontext;
+}
+footer button{
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+footer button:hover{
+    transform: scale(1.05);
+    background: #3498db;
+    color: white;
+}
+#button-to-top{
+    min-width: 200px;
+}
+@media (max-width: 1280px){
+    .over-mij p {
+        font-size: 25px;
+    }
+    .profile-info{
+        font-size: 20px;
+    }
+    .werkervaring-list{
+        font-size: 20px;
+    }
+    .skills{
+        font-size: 20px;
+    }
+    .talen{
+        font-size: 20px;
+    }
+    .opleiding{
+        font-size: 20px;
+    }
+}
+@media (max-width: 1000px){
+    body{
+        font-size: 20px;
+    }
+    .opleiding-cards{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    a{
+        padding: 8px;
+    }
+    .scroll-indicator{
+        padding: 15px;
+    }
+    .cv-photo-container{
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    .werkervaring-bedrijving{
+        padding: 16px;
+    }
+    .talen{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .opleiding{
+        display: none;
+    }
+    .opleiding-card{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer button{
+        padding: 16px 24px;
+        margin: 8px auto;
+        width: 100%;
+        max-width: 400px;
+        height: 56px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .container{
+        padding: 10px;
+    }
+    header{
+        padding: 30px 10px;
+    }
+    .scroll-indicator{
+        padding: 20px;
+    }
+    .profile-info-item, .werkervaring-item{
+        padding: 12px;
+    }
+    .talen{
+        grid-template-columns: 1fr;
+    }
+    .opleiding table{
+        display: none;
+    }
+    .opleiding-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        padding: 20px;
+    }
+    footer button{
+        min-height: 48px;
+        font-size: 16px;
+        margin: 10px auto;
+    }
+}
