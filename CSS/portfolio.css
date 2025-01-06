@@ -62,7 +62,6 @@ html{
 .logo{
     font-size: 2rem;
     font-weight: 600;
-    color: #333;
 }
 .logo:hover{
     cursor: default;
@@ -571,7 +570,6 @@ section{
 
 .aim-item p, .pop-item p, .xfactor-item p {
     line-height: 1.8;
-    color: #555;
 }
 @media screen and (max-width: 1200px) {
     section {
@@ -580,6 +578,9 @@ section{
     }
     .section-overmij h2{
         margin-top: 7rem;
+    }
+    .logboek-section h2, .ontwikkeling-section h2, .opdrachten-section h2, .reflectie-section h2{
+        margin-top: 4rem;
     }
 
     .timeline {
@@ -598,7 +599,7 @@ section{
     }
 
     .section-img-container {
-        margin-top: 10rem;
+        margin-top: 15rem;
     }
     .desktop-nav {
         display: none;
@@ -633,6 +634,11 @@ section{
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .menu-links-mobile a:hover {
+        color: gray;
+        text-decoration: underline;
+        text-underline-offset: .5rem;
     }
 
     .menu-links-mobile.open {
