@@ -117,7 +117,7 @@ html{
     list-style: none;
 }
 .menu-links-mobile.open{
-    max-height: 300px;
+    max-height: 400px;
 }
 .mobile-nav-icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
@@ -571,6 +571,72 @@ section{
 .aim-item p, .pop-item p, .xfactor-item p {
     line-height: 1.8;
 }
+
+.wpl2-section {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.wpl2-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.wpl2-case-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+.wpl2-case-container:hover {
+    transform: scale(1.02);
+}
+.wpl2-case-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+.wpl2-case-container h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+.wpl2-case-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
 @media screen and (max-width: 1200px) {
     section {
         margin: 0 2rem;
@@ -579,8 +645,8 @@ section{
     .section-overmij h2{
         margin-top: 7rem;
     }
-    .logboek-section h2, .ontwikkeling-section h2, .opdrachten-section h2, .reflectie-section h2{
-        margin-top: 4rem;
+    .logboek-section h2, .ontwikkeling-section h2, .opdrachten-section h2, .reflectie-section h2, .wpl2-section h2 {
+        margin-top: 5rem;
     }
 
     .timeline {
@@ -644,7 +710,7 @@ section{
     }
 
     .menu-links-mobile.open {
-        max-height: 300px;
+        max-height: 400px;
     }
 
     .mobile-nav-icon {
@@ -700,7 +766,7 @@ section{
     .ontwikkeling-item,
     .opdracht-content,
     .reflectie-card,
-    .wpl2-case-container {
+    .wpl2-case-container{
         width: 100%;
         padding: 1rem;
     }
@@ -739,7 +805,7 @@ section{
         padding: 8px;
     }
 
-    .reflectie-section {
+    .reflectie-section, .wpl2-case-section {
         padding: 2rem 1rem;
     }
     .mobile-nav {
