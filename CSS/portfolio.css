@@ -406,7 +406,7 @@ section{
     margin-bottom: 1rem;
     position: relative;
 }
-.competentie-content li:before {
+.competentie-list :before {
     content: "•";
     position: absolute;
     left: -1.5rem;
@@ -596,6 +596,8 @@ section{
     .section-container {
         flex-direction: column;
         gap: 2rem;
+        margin: 1rem;
+        padding: 2rem;
     }
 
     .section-img-container {
@@ -675,38 +677,32 @@ section{
 }
 
 @media screen and (max-width: 768px) {
-    section {
-        margin: 0 1rem;
-        padding-top: 2vh;
+    .section-img-container,
+    .overmij-img-container {
+        width: 100%;
+        height: auto;
     }
 
-    .section-header {
-        font-size: 2rem;
+    .overmij-img-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
-    .timeline {
+    .timeline,
+    .opdrachten-grid,
+    .rollen-grid {
         grid-template-columns: 1fr;
     }
 
-    .section-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-buttons button {
-        max-width: 200px;
-    }
-
-    .opdrachten-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reflectie-card {
-        padding: 1.5rem;
-    }
-
-    .reflectie-card h3 {
-        font-size: 1.5rem;
+    .section-buttons,
+    .ontwikkeling-content,
+    .ontwikkeling-item,
+    .opdracht-content,
+    .reflectie-card,
+    .wpl2-case-container {
+        width: 100%;
+        padding: 1rem;
     }
 }
 
@@ -718,11 +714,20 @@ section{
     }
 
     .ontwikkeling-item {
-        padding: 1.5rem;
+        padding: 1rem;
     }
-
     .ontwikkeling-content h4 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+    }
+    .ontwikkeling-content p {
+        font-size: 1rem;
+    }
+    .competentie-content li {
+        font-size: 0.95rem;
+        margin-left: 1rem;
+    }
+    .ontwikkeling-section {
+        padding: 1rem;
     }
 
     #socials-container {
